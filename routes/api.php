@@ -9,3 +9,4 @@ Route::get('/', function () {
 
 
 Route::post('/shopify/order-created', [ShopifyWebhookController::class, 'handle']);
+Route::post('/recharge/subscription-created', [ShopifyWebhookController::class, 'rechargeSubscriptionCreated']);

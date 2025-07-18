@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ShopifyWebhook extends Model
 {
-    protected $fillable = ['payload'];
+    protected $fillable = ['payload', 'response'];
 
     protected $casts = [
         'payload' => 'array',
+        'response' => 'array',
     ];
 }
  //

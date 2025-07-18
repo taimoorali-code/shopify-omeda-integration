@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('shopify_webhooks', function (Blueprint $table) {
             $table->id();
             $table->json('payload');
+            $table->json('response')->nullable(); // Optional field to store response from Omeda API
             $table->timestamps();
         });
 
