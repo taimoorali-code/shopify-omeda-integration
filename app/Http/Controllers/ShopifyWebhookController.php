@@ -47,10 +47,10 @@ class ShopifyWebhookController extends Controller
                     $response = $this->omedaService->handleSubscription($property['value'], $data, $item);
 
                     if ($response['status'] === 200) {
-                        // ShopifyWebhook::create([
-                        //     'payload' => $data,
-                        //     'response' => $response,
-                        // ]);
+                        ShopifyWebhook::create([
+                            'payload' => $data,
+                            'response' => $response,
+                        ]);
 
                         Log::info("Saved subscription order to DB.");
 
